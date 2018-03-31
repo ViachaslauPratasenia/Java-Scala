@@ -8,8 +8,8 @@ public class Coder extends Employee {
      * This method set text and task in gui
      */
     public void writeCode(){
-        Gui.coderTaskLabel.setText("Пишу код задачи :");
-        Gui.coderInputTaskLabel.setText(Gui.managerTextField.getText());
+        Gui.GetInstance().coderTaskLabel.setText("Пишу код задачи :");
+        Gui.GetInstance().coderInputTaskLabel.setText(Gui.GetInstance().managerTextField.getText());
     }
 
 }

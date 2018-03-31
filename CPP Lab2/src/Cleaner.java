@@ -8,7 +8,7 @@ public class Cleaner extends Employee {
      * This method set text and task in gui
      */
     public void clean(){
-        Gui.cleanerTask.setText("Убираю");
+        Gui.GetInstance().cleanerTask.setText("Убираю");
     }
 
 }

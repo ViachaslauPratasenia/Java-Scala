@@ -3,9 +3,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Gui implements ActionListener {
+
+    private static Gui Instance;
+
+    public static Gui GetInstance(){
+        if(Instance == null){
+            Instance = new Gui();
+        }
+        return Instance;
+    }
+
     public Gui(){
         JFrame frame = new JFrame("Second Lab");
-
         JPanel finalPanel = new JPanel();
 
         finalPanel.add(createFirstPanel());
@@ -33,7 +42,9 @@ public class Gui implements ActionListener {
         checkButton = new JButton("Проверка");
 
         JPanel managerPanel = new JPanel();
-        managerPanel.setLayout(new BoxLayout(managerPanel, BoxLayout.Y_AXIS));
+        BoxLayout boxLayout = new BoxLayout(managerPanel, BoxLayout.Y_AXIS);
+        managerPanel.setLayout(boxLayout);
+        managerPanel.setBorder(BorderFactory.createEmptyBorder(5,10,10,10));
 
         managerButton.addActionListener(this);
         checkButton.addActionListener(this);
@@ -56,7 +67,10 @@ public class Gui implements ActionListener {
         hireCleaner = new JButton("Нанять уборщика");
 
         JPanel companyPanel = new JPanel();
-        companyPanel.setLayout(new BoxLayout(companyPanel, BoxLayout.Y_AXIS));
+        BoxLayout boxLayout = new BoxLayout(companyPanel, BoxLayout.Y_AXIS);
+        companyPanel.setLayout(boxLayout);
+        companyPanel.setBorder(BorderFactory.createEmptyBorder(3,10,20,10));
+
 
         hireCoder.addActionListener(this);
         hireCleaner.addActionListener(this);
@@ -83,7 +97,11 @@ public class Gui implements ActionListener {
         coderButton.addActionListener(this);
 
         JPanel coderPanel = new JPanel();
-        coderPanel.setLayout(new BoxLayout(coderPanel, BoxLayout.Y_AXIS));
+
+        BoxLayout boxLayout = new BoxLayout(coderPanel, BoxLayout.Y_AXIS);
+        coderPanel.setLayout(boxLayout);
+        coderPanel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
         coderPanel.add(coderLabel);
         coderPanel.add(coderButton);
         coderPanel.add(coderQuantityLabel);
@@ -107,7 +125,9 @@ public class Gui implements ActionListener {
         cleanerButton.addActionListener(this);
 
         JPanel cleanerPanel = new JPanel();
-        cleanerPanel.setLayout(new BoxLayout(cleanerPanel, BoxLayout.Y_AXIS));
+        BoxLayout boxLayout = new BoxLayout(cleanerPanel, BoxLayout.Y_AXIS);
+        cleanerPanel.setLayout(boxLayout);
+        cleanerPanel.setBorder(BorderFactory.createEmptyBorder(5,10,10,10));
         cleanerPanel.add(cleanerLabel);
         cleanerPanel.add(cleanerButton);
         cleanerPanel.add(cleanerQuantity);
@@ -129,18 +149,18 @@ public class Gui implements ActionListener {
     private JLabel cleanerLabel;
     private JButton cleanerButton;
 
-    public static JTextField managerTextField;
-    public static JLabel coderInputTaskLabel;
-    public static JLabel coderTaskLabel;
-    public static JLabel coderQuantityLabel;
+    public JTextField managerTextField;
+    public JLabel coderInputTaskLabel;
+    public JLabel coderTaskLabel;
+    public JLabel coderQuantityLabel;
 
-    public static JLabel cleanerQuantity;
-    public static JLabel cleanerTask;
+    public JLabel cleanerQuantity;
+    public JLabel cleanerTask;
 
     private JButton checkButton;
 
-    public static Company company = new Company();
-    public static Manager manager = new Manager();
+    public Company company = new Company();
+    public Manager manager = new Manager();
 
 
     /**

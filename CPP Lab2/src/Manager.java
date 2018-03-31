@@ -12,8 +12,8 @@ public class Manager extends Employee {
      * and push it in array list with help method setTasks
      */
     public void setTask(){
-        company.setTasks(Gui.managerTextField.getText());
-        Gui.managerTextField.setText(null);
+        company.setTasks(Gui.GetInstance().managerTextField.getText());
+        Gui.GetInstance().managerTextField.setText(null);
         JOptionPane.showMessageDialog(null, "Задача добавлена");
     }
 

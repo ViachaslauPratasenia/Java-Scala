@@ -19,7 +19,7 @@ public class Company {
      */
     public void addCoder(){
         quantityCoder++;
-        Gui.coderQuantityLabel.setText("Количество : " + quantityCoder);
+        Gui.GetInstance().coderQuantityLabel.setText("Количество : " + quantityCoder);
     }
 
     /**
@@ -27,7 +27,7 @@ public class Company {
      */
     public void addCleaner(){
         quantityCleaner++;
-        Gui.cleanerQuantity.setText("Количество : " + quantityCleaner);
+        Gui.GetInstance().cleanerQuantity.setText("Количество : " + quantityCleaner);
     }
 
     /**
