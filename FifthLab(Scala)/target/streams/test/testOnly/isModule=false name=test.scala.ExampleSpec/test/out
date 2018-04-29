@@ -1,0 +1,6 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sum elements of list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sum elements of list recursive[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sum elements of list tail recursive[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should Fing num tail recursive *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  MutableList(0, 0, -3) did not equal MutableList(0, 0, -3, 0, 0, -3) (TestScala.scala:33)[0m[0m

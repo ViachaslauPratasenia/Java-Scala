@@ -1,0 +1,4 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mExampleSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sum elements of list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sum elements of list recursive[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should sum elements of list tail recursive[0m[0m
