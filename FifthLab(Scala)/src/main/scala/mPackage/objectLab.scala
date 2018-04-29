@@ -8,11 +8,6 @@ object objectLab{
     val list = List[Int](1,2,3,4,5,6,7,8)
     val list1 = mutable.MutableList[Int](1, 2, 0, 0, -3)
     val list2 = mutable.MutableList[Int]()
-    println("Lite sum = ", list.reduceLeft(_ + _))
-    println("Sum recursive = ", sumRecursive(list, list.length))
-    println("Sum with tail recursive", sumTailRecursive(list))
-    println("Find big num tail recursive ", bigNumTail(list1))
-    println("Find big num not rec ", bigNumNotRec(list1, list2))
   }
 
   def sumRecursive(list: List[Int],size: Int): Int = {
